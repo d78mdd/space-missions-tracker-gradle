@@ -68,33 +68,6 @@ class MissionControllerTests {
     }
 
     @Test
-    public void testGetMissionsByName() {
-        // TODO implement
-    }
-
-    @Test
-    public void testGetMissionsByDateEmptyResult() {
-        // TODO implement
-    }
-
-    @Test
-    public void testGetMissionsByNameEmptyResult() {
-        // TODO implement
-    }
-
-    @Test
-    public void testGetAllMissionsEmptyResult() {
-        // TODO implement
-    }
-
-
-
-    @Test
-    public void testGetMissionById() {
-        // TODO implement
-    }
-
-    @Test
     public void testGetMissionByIdNotFound() throws Exception {
         when(service.getMissionById(1L))
                 .thenReturn(null);
@@ -123,45 +96,6 @@ class MissionControllerTests {
                 .andExpect(jsonPath("$.launchDate", is("1977-09-05")))
                 .andExpect(jsonPath("$.status", is(mission.getStatus())))
                 .andExpect(jsonPath("$.description", is(mission.getDescription())));
-    }
-
-    @Test
-    public void testCreateMissionInvalidDate() {
-        // TODO implement
-    }
-
-    @Test
-    public void testCreateMissionEmptyRequestBody() {
-        // TODO implement
-    }
-
-
-
-    @Test
-    public void testUpdateMission() {
-        // TODO implement
-    }
-
-    @Test
-    public void testUpdateMissionMissingId() {
-        // TODO implement
-    }
-
-    @Test
-    public void testUpdateMissionMissingRequestBody() {
-        // TODO implement
-    }
-
-
-
-    @Test
-    public void testDeleteMission() {
-        // TODO implement
-    }
-
-    @Test
-    public void testDeleteMissionMissingId() {
-        // TODO implement
     }
 
 }
